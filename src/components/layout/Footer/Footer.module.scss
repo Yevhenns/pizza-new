@@ -1,0 +1,40 @@
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: var(--main-color);
+  border-top: 1px solid var(--secondary-text-color);
+
+  @include mobile {
+    padding-bottom: 80px;
+  }
+
+  .contactsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+
+  .socialSet {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+  }
+
+  .socialLink {
+    display: block;
+    transition: var(--transition);
+
+    svg {
+      font-size: 30px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .copyright {
+    text-align: left;
+  }
+}

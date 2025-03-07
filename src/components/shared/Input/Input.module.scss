@@ -1,0 +1,38 @@
+.fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .inputWrapper {
+    height: 100%;
+    position: relative;
+    display: flex;
+  }
+
+  .input {
+    font-family: var(--main-font);
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    transition: var(--transition);
+    border: 1px solid var(--accent-color);
+    outline: none;
+
+    &:hover {
+      box-shadow: var(--box-shadow);
+    }
+  }
+
+  .password {
+    padding-right: 40px;
+  }
+
+  .iconWrapper {
+    height: 32px;
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

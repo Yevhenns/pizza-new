@@ -1,0 +1,15 @@
+.list {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  @include lg-tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include before-lg-tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

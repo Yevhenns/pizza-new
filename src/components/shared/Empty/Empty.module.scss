@@ -1,0 +1,11 @@
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  span {
+    font-size: 16px;
+  }
+}

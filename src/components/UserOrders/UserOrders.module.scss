@@ -1,0 +1,58 @@
+.loadingWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.userInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+
+  .order {
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: var(--white-color);
+  }
+
+  .heading {
+    font-size: 24px;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  span {
+    font-size: 16px;
+  }
+
+  .titleQuantity {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .orderWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+
+  .optionsWrapper {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}

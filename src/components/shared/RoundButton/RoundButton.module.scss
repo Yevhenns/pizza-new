@@ -1,0 +1,30 @@
+.button {
+  background-color: transparent;
+  transition: var(--transition);
+  scale: 1;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  svg {
+    font-size: 24px;
+  }
+
+  &:hover:not(:disabled) {
+    scale: 1.1;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:disabled svg {
+    fill: var(--disabled-color);
+  }
+}

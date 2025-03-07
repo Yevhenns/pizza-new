@@ -1,0 +1,17 @@
+type IconsType =
+  | 'basket'
+  | 'logo-dark'
+  | 'logo-light'
+  | 'user'
+  | 'facebook'
+  | 'instagram'
+  | 'remove'
+  | 'left'
+  | 'right'
+  | 'heart'
+  | 'heart-filled'
+  | 'home'
+  | 'settings'
+  | 'edit'
+  | 'eye'
+  | 'eye-closed';

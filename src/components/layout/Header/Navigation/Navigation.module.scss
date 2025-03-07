@@ -1,0 +1,61 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: var(--background-gradient);
+  gap: 30px;
+  flex-wrap: nowrap;
+
+  @include mobile {
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: flex-start;
+    overflow-x: scroll;
+
+    svg {
+      transform: scale(0.8);
+    }
+  }
+
+  @include desktop {
+    gap: 80px;
+  }
+
+  .logoWrapper {
+    @include not-mobile {
+      display: none;
+    }
+  }
+
+  .link {
+    font-weight: 600;
+    color: var(--main-color);
+    font-size: 24px;
+    padding: 24px 0;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      padding: 12px 0;
+    }
+
+    @include before-desktop {
+      font-size: 20px;
+    }
+
+    &:hover {
+      color: var(--main-hover-color);
+    }
+  }
+  .active {
+    color: var(--main-hover-color);
+    scale: 1.2;
+  }
+
+  .hideOnMobile {
+    @include mobile {
+      display: none;
+    }
+  }
+}

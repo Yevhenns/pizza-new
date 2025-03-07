@@ -1,0 +1,17 @@
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+
+  .cardWrapper {
+    height: auto;
+    width: 297px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 500px;
+  }
+}

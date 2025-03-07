@@ -1,0 +1,35 @@
+.modal {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .resultText {
+    text-align: center;
+  }
+
+  .quantitySet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  a {
+    border-radius: 12px;
+
+    button {
+      width: 100%;
+    }
+  }
+}

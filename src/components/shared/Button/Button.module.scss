@@ -1,0 +1,30 @@
+.button {
+  padding: 0 24px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--white-color);
+  border-radius: 12px;
+  background-color: var(--accent-color);
+  border: none;
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: 18px;
+
+  &:hover:not(:disabled) {
+    box-shadow: var(--box-shadow);
+  }
+
+  &:active:not(:disabled) {
+    box-shadow:
+      2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset,
+      -2px -2px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  &:disabled {
+    background: var(--disabled-color);
+    cursor: default;
+  }
+}

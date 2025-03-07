@@ -1,0 +1,21 @@
+.fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  textarea {
+    font-family: var(--main-font);
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    resize: none;
+    transition: var(--transition);
+    border: 1px solid var(--accent-color);
+    outline: none;
+
+    &:hover {
+      box-shadow: var(--box-shadow);
+    }
+  }
+}

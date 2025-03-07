@@ -1,0 +1,25 @@
+.tableWrapper {
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    tr:nth-child(even) {
+      background-color: #ffd465;
+    }
+
+    td,
+    th {
+      border: 1px solid var(--black-color);
+      padding: 4px;
+    }
+
+    .buttonsWrapper {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}

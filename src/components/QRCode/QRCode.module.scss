@@ -1,0 +1,18 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 5px;
+
+  .text {
+    text-align: center;
+  }
+}
+
+.item {
+  img {
+    height: auto;
+  }
+}
