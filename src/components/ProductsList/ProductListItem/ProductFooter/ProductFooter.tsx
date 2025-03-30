@@ -34,8 +34,7 @@ export function ProductFooter({
         <p className={css.price}>{totalPrice} грн</p>
       )}
       <Button type="button" onClick={addItemToCart}>
-        <Icon svg="basket" iconWidth={19} iconHeight={19} color="white" />В
-        кошик
+        Купити
       </Button>
     </div>
   );

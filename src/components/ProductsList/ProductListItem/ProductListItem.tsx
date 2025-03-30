@@ -9,6 +9,7 @@ import { useAppDispatch } from '@/store/hooks';
 
 import { ProductDescription } from './ProductDescription/ProductDescription';
 import { ProductFooter } from './ProductFooter/ProductFooter';
+import { ProductImage } from './ProductImage/ProductImage';
 import css from './ProductListItem.module.scss';
 import { ProductOptionsList } from './ProductOptionsList/ProductOptionsList';
 import { ProductQuantity } from './ProductQuantity/ProductQuantity';
@@ -95,29 +96,34 @@ export function ProductListItem({
 
   return (
     <article className={css.listItem}>
-      <ProductDescription item={item} preview={preview} />
-      <ProductQuantity
-        filteredSupplements={filteredSupplements}
-        getTotalQuantity={getTotalQuantity}
-        handleChange={handleShowOptions}
-        supplements={supplements}
-        category={category}
-        _id={_id}
-        optionsShown={optionsShown}
-      />
-      {optionsShown && (
-        <ProductOptionsList
+      <div className={css.descriptionWrapper}>
+        <ProductDescription item={item} />
+        {/* <ProductQuantity
           filteredSupplements={filteredSupplements}
-          handleChange={handleChooseOptions}
+          getTotalQuantity={getTotalQuantity}
+          handleChange={handleShowOptions}
+          supplements={supplements}
+          category={category}
+          _id={_id}
+          optionsShown={optionsShown}
         />
-      )}
-      <ProductFooter
-        preview={preview}
-        promotion={promotion}
-        totalPrice={totalPrice}
-        totalPromPrice={totalPromPrice}
-        addToCart={addToCart}
-      />
+        {optionsShown && (
+          <ProductOptionsList
+            filteredSupplements={filteredSupplements}
+            handleChange={handleChooseOptions}
+          />
+        )} */}
+        <ProductFooter
+          preview={preview}
+          promotion={promotion}
+          totalPrice={totalPrice}
+          totalPromPrice={totalPromPrice}
+          addToCart={addToCart}
+        />
+      </div>
+      <div className={css.imageWrapper}>
+        <ProductImage item={item} preview={preview} />
+      </div>
     </article>
   );
 }

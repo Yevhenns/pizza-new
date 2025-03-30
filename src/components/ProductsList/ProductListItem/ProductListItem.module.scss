@@ -1,10 +1,9 @@
 .listItem {
   box-shadow: 4px 4px 14px 0px rgba(59, 50, 50, 0.25);
   background-color: var(--bg-dark);
-  padding: 24px;
+  padding: 20px;
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 350px;
@@ -14,5 +13,16 @@
 
   &:hover {
     box-shadow: 4px 4px 14px 0px rgba(59, 50, 50, 0.6);
+  }
+
+  .descriptionWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    width: 180px;
+    min-width: 180px;
+    position: relative;
   }
 }
