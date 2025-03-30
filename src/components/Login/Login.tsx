@@ -15,9 +15,11 @@ import {
   clearOrderHistory,
   getUserProducts,
 } from '@/store/userOrders/userOrdersSlice';
-import { GoogleLogin, googleLogout } from '@react-oauth/google';
+import { GoogleLogin, googleLogout, useGoogleLogin } from '@react-oauth/google';
 
 import { UserOrders } from '../UserOrders/UserOrders';
+import { Button } from '../shared/Button/Button';
+import { Icon } from '../shared/Icon/Icon';
 import { LoaderModal } from '../shared/LoaderModal/LoaderModal';
 import { AuthForm } from './AuthForm/AuthForm';
 import css from './Login.module.scss';
@@ -74,6 +76,11 @@ export default function Login() {
     }
   };
 
+  const googleLogin = useGoogleLogin({
+    onSuccess: tokenResponse => sendGoogleToken(tokenResponse.access_token),
+    onError: () => toast.error('Сталася помилка'),
+  });
+
   useEffect(() => {
     if (token) {
       dispatch(getUserProducts(token));
@@ -89,6 +96,15 @@ export default function Login() {
             <div className={css.authWrapper}>
               {action === 'login' && <h2>Вхід</h2>}
               {action === 'register' && <h2>Реєстрація</h2>}
+              {/* <Button type="button" onClick={googleLogin}>
+                <Icon
+                  svg="google-logo"
+                  iconWidth={24}
+                  iconHeight={24}
+                  color="black"
+                />{' '}
+                Вхід через Google
+              </Button> */}
               <GoogleLogin
                 onSuccess={credentialResponse => {
                   if (credentialResponse.credential) {

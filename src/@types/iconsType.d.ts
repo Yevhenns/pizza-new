@@ -16,4 +16,5 @@ type IconsType =
   | 'eye'
   | 'eye-closed'
   | 'burger'
-  | 'close';
+  | 'close'
+  | 'google-logo';
