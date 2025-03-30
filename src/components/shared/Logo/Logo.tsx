@@ -14,7 +14,7 @@ export function Logo({ isLight = true }: LogoProps) {
         svg={isLight ? 'logo-light' : 'logo-dark'}
         iconWidth={75}
         iconHeight={64}
-        color="white"
+        color="main"
       />
     </Link>
   );
