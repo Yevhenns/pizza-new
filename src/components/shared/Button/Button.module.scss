@@ -12,6 +12,7 @@
   transition: var(--transition);
   cursor: pointer;
   font-size: 18px;
+  color: var(--bg-black);
 
   &:hover:not(:disabled) {
     box-shadow: var(--box-shadow);

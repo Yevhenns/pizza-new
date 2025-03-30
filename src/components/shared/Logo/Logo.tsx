@@ -7,7 +7,7 @@ type LogoProps = {
   isLight?: boolean;
 };
 
-export function Logo({ isLight = false }: LogoProps) {
+export function Logo({ isLight = true }: LogoProps) {
   return (
     <Link href={'/'} className={css.logo} aria-label="logo home page">
       <Icon
