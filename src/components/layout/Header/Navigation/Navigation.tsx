@@ -16,9 +16,7 @@ export function Navigation({ closeDrawer }: NavigationProps) {
 
   return (
     <nav className={css.nav}>
-      <div className={css.logoWrapper}>
-        <Logo isLight />
-      </div>
+      <hr />
       <Link
         onClick={closeDrawer}
         className={cn(

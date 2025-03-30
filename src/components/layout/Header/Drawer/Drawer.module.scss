@@ -1,5 +1,5 @@
 .drawer {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   max-width: 480px;
   position: absolute;
@@ -9,8 +9,25 @@
   background-color: var(--bg-light);
   color: var(--bg-black);
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+  .titleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
 
   &.right {
     right: 0;
+  }
+
+  .logoWrapper {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

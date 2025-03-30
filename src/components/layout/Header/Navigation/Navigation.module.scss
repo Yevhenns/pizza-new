@@ -1,10 +1,10 @@
 .nav {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background: var(--background-gradient);
-  gap: 30px;
+  gap: 14px;
   flex-wrap: nowrap;
+  height: auto;
 
   @include mobile {
     padding-left: 16px;
@@ -17,21 +17,13 @@
     }
   }
 
-  @include desktop {
-    gap: 80px;
-  }
-
   .logoWrapper {
-    @include not-mobile {
-      display: none;
-    }
+    margin-top: auto;
   }
 
   .link {
-    font-weight: 600;
     color: var(--main-color);
-    font-size: 24px;
-    padding: 24px 0;
+    font-size: 20px;
     transition: var(--transition);
     display: flex;
     align-items: center;
@@ -50,7 +42,6 @@
   }
   .active {
     color: var(--main-hover-color);
-    scale: 1.2;
   }
 
   .hideOnMobile {

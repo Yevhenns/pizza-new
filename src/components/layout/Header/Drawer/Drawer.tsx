@@ -4,6 +4,7 @@ import { createPortal } from 'react-dom';
 import { cn } from '@/helpers/combineClasses';
 
 import { Icon } from '@/components/shared/Icon/Icon';
+import { Logo } from '@/components/shared/Logo/Logo';
 import { RoundButton } from '@/components/shared/RoundButton/RoundButton';
 
 import css from './Drawer.module.scss';
@@ -23,16 +24,18 @@ export function Drawer({
 }: DrawerProps) {
   return (
     <>
-      {createPortal(
-        <div className={cn(css.drawer, appear === 'right' ? css.right : '')}>
+      <div className={cn(css.drawer, appear === 'right' ? css.right : '')}>
+        <div className={css.titleWrapper}>
           <p>{title}</p>
           <RoundButton onClick={closeDrawer}>
             <Icon svg="close" color="black" iconWidth={24} iconHeight={24} />
           </RoundButton>
-          {children}
-        </div>,
-        document.body
-      )}
+        </div>
+        {children}
+        <div className={css.logoWrapper}>
+          <Logo isLight={false} />
+        </div>
+      </div>
     </>
   );
 }
