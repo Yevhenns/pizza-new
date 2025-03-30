@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -13,13 +15,17 @@ import { getFavorites } from '@/store/products/productsSlice';
 import { Container } from '@/components/shared/Container/Container';
 import { Icon } from '@/components/shared/Icon/Icon';
 import { Logo } from '@/components/shared/Logo/Logo';
+import { RoundButton } from '@/components/shared/RoundButton/RoundButton';
 
 import { PhoneNumbersSet } from '../PhoneNumbersSet/PhoneNumbersSet';
 import { Avatar } from './Avatar/Avatar';
+import { Drawer } from './Drawer/Drawer';
 import css from './Header.module.scss';
 import { Navigation } from './Navigation/Navigation';
 
 export function Header() {
+  const [showDrawer, setShowDrawer] = useState<null | 'menu' | 'basket'>(null);
+
   const pathname = usePathname();
 
   const cartLength = useAppSelector(getCartItems).length;
@@ -32,10 +38,26 @@ export function Header() {
     return userInfo?.role === 'Admin' || userInfo?.role === 'Viewer';
   };
 
+  const showMenu = () => {
+    setShowDrawer('menu');
+  };
+
+  const closeDrawer = () => {
+    setShowDrawer(null);
+  };
+
   return (
     <header className={css.header}>
       <Container>
         <div className={css.headerItem}>
+          <RoundButton onClick={showMenu}>
+            <Icon svg="burger" iconWidth={40} iconHeight={40} color="main" />
+          </RoundButton>
+          {showDrawer === 'menu' && (
+            <Drawer title="Меню" closeDrawer={closeDrawer}>
+              <Navigation closeDrawer={closeDrawer} />
+            </Drawer>
+          )}
           <Logo />
           <div className={css.headerLinks}>
             <div className={css.phoneNumberSet}>
@@ -92,7 +114,6 @@ export function Header() {
           </div>
         </div>
       </Container>
-      <Navigation />
     </header>
   );
 }
