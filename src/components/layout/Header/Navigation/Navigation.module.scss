@@ -5,10 +5,10 @@
   gap: 14px;
   flex-wrap: nowrap;
   height: auto;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
 
   @include mobile {
-    padding-left: 16px;
-    padding-right: 16px;
     justify-content: flex-start;
     overflow-x: scroll;
 

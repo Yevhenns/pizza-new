@@ -69,7 +69,7 @@ export function ProductImage({ item, preview = false }: ProductImageProps) {
           height={240}
           priority={true}
         />
-        {vegan && (
+        {/* {vegan && (
           <Image
             className={css.vegan}
             src={'/leave.png'}
@@ -88,7 +88,7 @@ export function ProductImage({ item, preview = false }: ProductImageProps) {
             height={40}
             priority={true}
           />
-        )}
+        )} */}
         {promotion && <div className={css.promotion}>Акція</div>}
         {/* <div className={css.favorite}>
           <RoundButton aria-label="add to favorite" onClick={addToFavorite}>

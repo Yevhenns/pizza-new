@@ -13,10 +13,10 @@
     align-items: center;
     justify-content: space-between;
 
-    @include mobile {
-      justify-content: center;
-      display: none;
-    }
+    // @include mobile {
+    //   justify-content: center;
+    //   display: none;
+    // }
   }
 
   .headerLinks {
