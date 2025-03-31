@@ -7,11 +7,11 @@
     flex: auto;
 
     @include mobile {
-      padding-top: 51px;
+      padding-top: 128px;
     }
 
     @include tablet {
-      padding-top: 179px;
+      padding-top: 128px;
     }
 
     @include desktop {

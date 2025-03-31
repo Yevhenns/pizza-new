@@ -49,16 +49,16 @@ export function Header() {
   return (
     <header className={css.header}>
       <Container>
+        {showDrawer === 'menu' && (
+          <Drawer title="Меню" closeDrawer={closeDrawer}>
+            <Navigation closeDrawer={closeDrawer} />
+          </Drawer>
+        )}
         <div className={css.headerItem}>
-          <RoundButton onClick={showMenu}>
-            <Icon svg="burger" iconWidth={40} iconHeight={40} color="main" />
-          </RoundButton>
-          {showDrawer === 'menu' && (
-            <Drawer title="Меню" closeDrawer={closeDrawer}>
-              <Navigation closeDrawer={closeDrawer} />
-            </Drawer>
-          )}
           <Logo />
+          <RoundButton onClick={showMenu}>
+            <Icon svg="burger" iconWidth={32} iconHeight={32} color="main" />
+          </RoundButton>
           <div className={css.headerLinks}>
             <div className={css.phoneNumberSet}>
               <PhoneNumbersSet />
@@ -77,7 +77,7 @@ export function Header() {
                 <Icon svg="user" iconWidth={34} iconHeight={34} />
               )}
             </Link>
-            <Link
+            {/* <Link
               className={cn(
                 css.navLink,
                 pathname === '/favorite' ? css.active : ''
@@ -87,7 +87,7 @@ export function Header() {
             >
               <Icon svg="heart" iconWidth={34} iconHeight={34} />
               {favoriteLength !== 0 && <span>{favoriteLength}</span>}
-            </Link>
+            </Link> */}
             <Link
               className={cn(
                 css.navLink,
